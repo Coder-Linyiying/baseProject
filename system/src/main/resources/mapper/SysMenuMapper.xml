@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.linyy.kitty.admin.mapper.SysMenuMapper">
-  <resultMap id="BaseResultMap" type="com.linyy.kitty.admin.entity.SysMenu">
-    <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="parent_id" jdbcType="BIGINT" property="parentId" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="url" jdbcType="VARCHAR" property="url" />
-    <result column="perms" jdbcType="VARCHAR" property="perms" />
-    <result column="type" jdbcType="INTEGER" property="type" />
-    <result column="icon" jdbcType="VARCHAR" property="icon" />
-    <result column="order_num" jdbcType="INTEGER" property="orderNum" />
-    <result column="create_by" jdbcType="BIGINT" property="createBy" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="last_update_by" jdbcType="BIGINT" property="lastUpdateBy" />
-    <result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
-    <result column="del_flag" jdbcType="TINYINT" property="delFlag" />
-  </resultMap>
+<mapper namespace="com.linyy.system.mapper.SysMenuMapper">
+    <resultMap id="BaseResultMap" type="com.linyy.system.entity.SysMenu">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="parent_id" jdbcType="BIGINT" property="parentId"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+        <result column="perms" jdbcType="VARCHAR" property="perms"/>
+        <result column="type" jdbcType="INTEGER" property="type"/>
+        <result column="icon" jdbcType="VARCHAR" property="icon"/>
+        <result column="order_num" jdbcType="INTEGER" property="orderNum"/>
+        <result column="create_by" jdbcType="BIGINT" property="createBy"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="last_update_by" jdbcType="BIGINT" property="lastUpdateBy"/>
+        <result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime"/>
+        <result column="del_flag" jdbcType="TINYINT" property="delFlag"/>
+    </resultMap>
 
-  <sql id="columnList">
-    id,
-    parent_id,
-    name,
-    url,
-    perms,
-    type,
-    icon,
-    order_num,
-    create_by,
-    create_time,
-    last_update_by,
-    last_update_time,
-    del_flag
-  </sql>
+    <sql id="columnList">
+        id,
+        parent_id,
+        name,
+        url,
+        perms,
+        type,
+        icon,
+        order_num,
+        create_by,
+        create_time,
+        last_update_by,
+        last_update_time,
+        del_flag
+    </sql>
 
-  <select id="selectAll" resultMap="BaseResultMap">
-    SELECT
+    <select id="selectAll" resultMap="BaseResultMap">
+        SELECT
         <include refid="columnList"/>
-    FROM
+        FROM
         sys_menu
-  </select>
+    </select>
 
-  <select id="selectPage" resultMap="BaseResultMap" parameterType="map">
-    SELECT
+    <select id="selectPage" resultMap="BaseResultMap" parameterType="map">
+        SELECT
         <include refid="columnList"/>
-    FROM
+        FROM
         sys_menu
-  </select>
+    </select>
 
-  <select id="findByUserName" parameterType="java.lang.String" resultMap="BaseResultMap">
-    SELECT
+    <select id="findByUserName" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT
         m.id,
         m.parent_id,
         m.name,
@@ -62,13 +62,13 @@
         m.last_update_by,
         m.last_update_time,
         m.del_flag
-    FROM
+        FROM
         sys_menu m, sys_user u, sys_user_role ur, sys_role_menu rm
-    WHERE
+        WHERE
         u.name = #{userName,jdbcType=BIGINT}
         AND u.id = ur.user_id
         AND ur.role_id = rm.role_id
         AND rm.menu_id = m.id
-  </select>
+    </select>
 
 </mapper>

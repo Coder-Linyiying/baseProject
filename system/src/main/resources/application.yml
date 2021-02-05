@@ -6,7 +6,7 @@ server:
       max: 1000
       min-spare: 30
   servlet:
-    context-path: /kitty-admin
+    context-path: /system
 
 spring:
   datasource:
@@ -63,7 +63,7 @@ spring:
 
 mybatis-plus:
   mapper-locations: classpath*:mapper/*.xml
-  type-aliases-package: com.linyy.kitty.**.entity
+  type-aliases-package: com.linyy.**.entity
   configuration:
     map-underscore-to-camel-case: true
 #oauth2、anon

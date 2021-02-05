@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.linyy.kitty.admin.mapper.SysRoleMenuMapper">
-  <resultMap id="BaseResultMap" type="com.linyy.kitty.admin.entity.SysRoleMenu">
-    <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="role_id" jdbcType="BIGINT" property="roleId" />
-    <result column="menu_id" jdbcType="BIGINT" property="menuId" />
-    <result column="create_by" jdbcType="BIGINT" property="createBy" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="last_update_by" jdbcType="BIGINT" property="lastUpdateBy" />
-    <result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
-  </resultMap>
+<mapper namespace="com.linyy.system.mapper.SysRoleMenuMapper">
+    <resultMap id="BaseResultMap" type="com.linyy.system.entity.SysRoleMenu">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="role_id" jdbcType="BIGINT" property="roleId"/>
+        <result column="menu_id" jdbcType="BIGINT" property="menuId"/>
+        <result column="create_by" jdbcType="BIGINT" property="createBy"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="last_update_by" jdbcType="BIGINT" property="lastUpdateBy"/>
+        <result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime"/>
+    </resultMap>
 
 </mapper>

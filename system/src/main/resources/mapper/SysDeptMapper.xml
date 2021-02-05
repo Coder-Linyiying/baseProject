@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.linyy.kitty.admin.mapper.SysDeptMapper">
-  <resultMap id="BaseResultMap" type="com.linyy.kitty.admin.entity.SysDept">
-    <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="parent_id" jdbcType="BIGINT" property="parentId" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="order_num" jdbcType="INTEGER" property="orderNum" />
-    <result column="create_by" jdbcType="BIGINT" property="createBy" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="last_update_by" jdbcType="BIGINT" property="lastUpdateBy" />
-    <result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
-    <result column="del_flag" jdbcType="TINYINT" property="delFlag" />
-  </resultMap>
+<mapper namespace="com.linyy.system.mapper.SysDeptMapper">
+    <resultMap id="BaseResultMap" type="com.linyy.system.entity.SysDept">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="parent_id" jdbcType="BIGINT" property="parentId"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="order_num" jdbcType="INTEGER" property="orderNum"/>
+        <result column="create_by" jdbcType="BIGINT" property="createBy"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="last_update_by" jdbcType="BIGINT" property="lastUpdateBy"/>
+        <result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime"/>
+        <result column="del_flag" jdbcType="TINYINT" property="delFlag"/>
+    </resultMap>
 
 </mapper>
